@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="my" targetRuntime="MyBatis3">
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/yjgl"
+                        userId="root"
+                        password="19991240">
+        </jdbcConnection>
+
+        <!-- 生成实体类地址 -->
+        <javaModelGenerator targetPackage="com.example.web22"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!--生成映射文件的存放位置-->
+        <sqlMapGenerator targetPackage="mapping" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- 生成mapxml对应client，也就是接口dao -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.example.web22.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+<!--        <table tableName="army_base_info" domainObjectName="ArmyBaseDO"/>-->
+<!--        <table tableName="army_ability" domainObjectName="ArmyAbilityDO"/>-->
+<!--        <table tableName="army_prop" domainObjectName="ArmyPropDO"/>-->
+<!--        <table tableName="army_tree" domainObjectName="ArmyTreeDO" />-->
+<!--        <table tableName="army_staff" domainObjectName="ArmyStaffDO" />-->
+<!--        <table tableName="dwzhgl" domainObjectName="AccountNumberDO" />-->
+<!--        <table tableName="tab_imgupload" domainObjectName="ImageUploadDO" />-->
+<!--        <table tableName="organize" domainObjectName="OrganizeDo"/>-->
+<!--        <table tableName="tab_ylgl" domainObjectName="TabYlglDo"/>-->
+<!--        <table tableName="Zbxxgl" domainObjectName="ZbxxglDo"/>-->
+<!--        <table tableName="user_xxcx" domainObjectName="UserXxcxDo"/>-->
+<!--        <table tableName="user_jcyj" domainObjectName="UserJcyjDo"/>-->
+<!--        <table tableName="dwyqsd" domainObjectName="DwyqsdDo"/>-->
+    </context>
+</generatorConfiguration>
